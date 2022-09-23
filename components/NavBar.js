@@ -10,7 +10,8 @@ export default function NavBar() {
   return (
     <>
       <nav>
-        <div className="bg-black text-white w-full flex justify-center">
+        <div className="bg-black text-white w-full flex justify-center relative">
+          <div className=" absolute top-1 left-1">문어</div>
           <ul className="flex  py-1 w-full max-w-[800px]">
             {/* home */}
             <li className="flex justify-center w-full">
