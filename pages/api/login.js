@@ -2,9 +2,9 @@ const saveId = "pjh";
 const savePw = "qkrwhdgns123";
 
 const login = (req, res) => {
-  const { id, pw } = req.body;
+  console.log("---------방금 내가 찍은거-----------");
 
-  // console.log(req.body);
+  const { id, pw } = req.body;
 
   if ("POST" !== req.method)
     return res
