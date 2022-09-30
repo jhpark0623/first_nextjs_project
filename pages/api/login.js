@@ -4,12 +4,15 @@ const savePw = "qkrwhdgns123";
 const login = (req, res) => {
   console.log("---------방금 내가 찍은거-----------");
 
-  const { id, pw } = req.body;
+  console.log(req.query);
 
-  if ("POST" !== req.method)
-    return res
-      .status(405)
-      .json({ ok: false, message: "지원하지 않는 메서드 입니다." });
+  const { id, pw } = req.query;
+  console.log(id);
+
+  // if ("POST" !== req.method)
+  //   return res
+  //     .status(405)
+  //     .json({ ok: false, message: "지원하지 않는 메서드 입니다." });
 
   if (!id) return res.json({ ok: false, message: "ID를 입력하세요" });
   if (!pw) return res.json({ ok: false, message: "PW를 입력하세요" });
